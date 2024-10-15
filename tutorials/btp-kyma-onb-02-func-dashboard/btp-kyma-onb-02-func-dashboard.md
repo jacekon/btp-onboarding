@@ -1,10 +1,10 @@
 ---
 keywords: Set up SAP BTP, Kyma runtime
 parser: v2
-time: 30
+time: 10
 tags: [ tutorial>beginner ]
 primary_tag: topic>sap-community
-author_name: Gaurav Abbi, Oliver Stiefbold
+author_name: Gaurav Abbi, Oliver Stiefbold, Malgorzata Swieca, Jacek Konopelski
 ---
 
 # Create a "Hello-World" Kyma Function and a microservice
