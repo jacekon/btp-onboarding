@@ -1,5 +1,17 @@
-## Setup Kubectl as Command Line Tool
+---
+keywords: Set up SAP BTP, Kyma runtime
+parser: v2
+time: 30
+tags: [ tutorial>beginner ]
+primary_tag: topic>sap-community
+author_name: Gaurav Abbi, Oliver Stiefbold
+---
 
+# Create a "Hello-World" Kyma Function with Kyma Command Line Interface
+
+<!-- description -->Once the Kyma module "Serverless" is added and ready in your Kyma environment, it's time to create your first function.
+
+In this tutorial, you will use Kyma CLI to create a Kyma Function.
 
 ### Required Command Line Tools
 
