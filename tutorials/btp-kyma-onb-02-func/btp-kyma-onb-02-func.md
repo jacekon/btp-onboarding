@@ -37,7 +37,7 @@ You have created and set up your "SAP BTP, Kyma Environment" either manually or 
 
 Congratulations, you are in Kyma dashboard!
 
-    ![Your Kyma Dasboard, Cluster Details](images/2_11_kyma_dashboard.png)
+![Your Kyma Dasboard, Cluster Details](images/2_11_kyma_dashboard.png)
 
 ### Enable the Serverless module
 
