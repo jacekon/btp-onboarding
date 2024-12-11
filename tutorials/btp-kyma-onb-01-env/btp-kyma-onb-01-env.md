@@ -34,23 +34,23 @@ You can use an existing subaccount of your SAP BTP global enterprise account and
 
 In this step, you create a new subaccount for your Kyma runtime.
 
-> **NOTE:** In an SAP BTP **trial account**, a subaccount with Kyma entitlement is already preconfigured. You could create another subaccount in trial, but it will not have unused entitlements to use Kyma. You need to delete the Kyma entitlement in the preconfigured subaccount first.
+> **Note:** In an SAP BTP **trial account**, a subaccount with Kyma entitlement is already preconfigured. You could create another subaccount in trial, but it will not have unused entitlements to use Kyma. You need to delete the Kyma entitlement in the preconfigured subaccount first.
 
 1. Navigate to your Global Account homepage. Select **Create > Subaccount**.
 
-   ![Create a new subaccount](images/22_1_createsub.png)
+    ![Create a new subaccount](images/22_1_createsub.png)
 
 2. Enter the **Display Name** and your preferred **Region**.
 
-   For more details about Regions where Kyma is available, see [Discovery Center](https://discovery-center.cloud.sap/serviceCatalog/kyma-runtime?region=all) and [Regions for the Kyma Environment](https://help.sap.com/docs/btp/sap-business-technology-platform/regions-for-kyma-environment) in SAP Help Portal.
+    For more details about Regions where Kyma is available, see [Discovery Center](https://discovery-center.cloud.sap/serviceCatalog/kyma-runtime?region=all) and [Regions for the Kyma Environment](https://help.sap.com/docs/btp/sap-business-technology-platform/regions-for-kyma-environment) in SAP Help Portal.
 
-   Optional: You may also change the name of your **Subdomain**. The subdomain will become a part of the URL for accessing applications that you subscribe to from this subaccount. The subdomain must be unique across all subaccounts in the same region. Uppercase and lowercase will not differentiate subdomains.
+    **Optional**: You may also change the name of your **Subdomain**. The subdomain will become a part of the URL for accessing applications that you subscribe to from this subaccount. The subdomain must be unique across all subaccounts in the same region. Uppercase and lowercase will not differentiate subdomains.
 
-   ![Provide details for the subaccount](images/22_2_createsub.png)
+    ![Provide details for the subaccount](images/22_2_createsub.png)
 
 3. Once created, go to the subaccount and scroll down to **Entitlements**.
 
-   If you use an SAP BTP trial account, you are already entitled to use the **Kyma runtime** service and can skip the "Entitle your subaccount to use Kyma runtime" step.
+    If you use an SAP BTP trial account, you are already entitled to use the **Kyma runtime** service and can skip the "Entitle your subaccount to use Kyma runtime" step.
 
 ### Entitle your subaccount to use Kyma runtime
 

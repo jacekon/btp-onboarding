@@ -45,16 +45,16 @@ Congratulations, you are in Kyma dashboard!
 
     ![Your Kyma Dasboard, Cluster Details](images/2_12_kyma_modules.png)
 
-    > **Note:** When you enable Kyma, it is provisioned with the default modules added:
-    > - The **Istio** module is a service mesh with Kyma-specific configuration.
-    > - The **API Gateway** module provides functionalities that allow you to expose and secure APIs.
+    > **Note:** When you enable Kyma, it is provisioned with the default modules added:<br>
+    > - The **Istio** module is a service mesh with Kyma-specific configuration.<br>
+    > - The **API Gateway** module provides functionalities that allow you to expose and secure APIs.<br>
     > - Within the **SAP BTP Operator** module, BTP Manager installs the SAP BTP service operator that allows you to consume SAP BTP services from your Kubernetes cluster using Kubernetes-native tools.
 
 2. Choose **Add** to open the **Add Modules** view. Select **serverless** and choose **Add**.
 
-   ![Browsing modules](images/2_13_add_module.png)
+    ![Browsing modules](images/2_13_add_module.png)
 
-    > **NOTE:** In this tutorial you use the Serverless module from the default release channel, namely the regular channel. You can also choose the fast channel. For more information, see [Kyma Release Channels](https://help.sap.com/docs/btp/sap-business-technology-platform/kyma-s-modular-approach?locale=en-US).
+    > **Note:** In this tutorial you use the Serverless module from the default release channel, namely the regular channel. You can also choose the fast channel. For more information, see [Kyma Release Channels](https://help.sap.com/docs/btp/sap-business-technology-platform/kyma-s-modular-approach?locale=en-US).
 
 3. Once the module's state is `Ready`, go to **Namespaces** and choose the **default** namespace.
 
@@ -64,7 +64,7 @@ Congratulations, you are in Kyma dashboard!
 
     ![Functions are now available](images/2_17_workloads_functions.png)
 
-    Congratulations! Now you can create serverless Functions in Kyma.
+Congratulations! Now you can create serverless Functions in Kyma.
 
 ### Create a "Hello-World" Kyma Function
 
@@ -72,13 +72,13 @@ Congratulations, you are in Kyma dashboard!
 
 2. Fill in the form in the **Create Function** view using the following details and choose **Create**.
 
-   - **Template**: `default`
-   - **Name**: for example, `hello-world`
-   - **Language**: `JavaScript`
-   - **Runtime**: `node.js 20`
-   - **Function Profile**: `XS`
+    - **Template**: `default`
+    - **Name**: for example, `hello-world`
+    - **Language**: `JavaScript`
+    - **Runtime**: `node.js 20`
+    - **Function Profile**: `XS`
 
-   ![kyma function](images/2_18_function_edit.png)
+    ![kyma function](images/2_18_function_edit.png)
   
 3. Creating a Function takes a few seconds. Select the newly created **hello-world** Function and switch to the **Configuration** tab. As it does not have any APIRules yet, you need to create one to define the rules of accessing the Function using APIs.
 
@@ -90,12 +90,12 @@ Congratulations, you are in Kyma dashboard!
 
 5. Fill in the form in the **Create API Rule** view using the following details and choose **Create**
 
-   - **Name**: for example, `hello-rule`
-   - **Service Name**: the `hello-world` Function
-   - **Port**: `80`
-   - Leave the pre-defined details in the **Gateway** section
-   - **Host**, for example, `hello-host`
-   - Leave the pre-defined details in the **Rules** section
+    - **Name**: for example, `hello-rule`
+    - **Service Name**: the `hello-world` Function
+    - **Port**: `80`
+    - Leave the pre-defined details in the **Gateway** section
+    - **Host**, for example, `hello-host`
+    - Leave the pre-defined details in the **Rules** section
 
     ![kyma api rule](images/2_22_hello_rule.png)
 
@@ -105,7 +105,7 @@ Congratulations, you are in Kyma dashboard!
 
     A browser window will open showing the following result:
 
-     **`Hello World from the Kyma Function hello-world running on nodejs20!`**
+    **`Hello World from the Kyma Function hello-world running on nodejs20!`**
 
 ### Deploy a microservice on Kyma
 
@@ -113,8 +113,8 @@ You already know how to deploy and expose a Function. You can do the same with a
 
 To deploy a microservice, you will use the **orders-service** from Kyma examples. It is available:
 
-   - in [GitHub](https://github.com/kyma-project/examples/blob/main/orders-service/README.md), or
-   - as a Docker image on Google Container Registry `eu.gcr.io/kyma-project/develop/orders-service:68a58069`.
+    - in [GitHub](https://github.com/kyma-project/examples/blob/main/orders-service/README.md), or
+    - as a Docker image on Google Container Registry `eu.gcr.io/kyma-project/develop/orders-service:68a58069`.
 
 This tutorial shows how to deploy a microservice using the Docker image.
 
@@ -124,9 +124,9 @@ This tutorial shows how to deploy a microservice using the Docker image.
 
 3. Fill in the form in the **Create Deployments** view using the following details and then choose **Create**.
 
-   - **Name**: `orders-deployment`
-   - **Docker Image**: `eu.gcr.io/kyma-project/develop/orders-service:68a58069`
-   - Optionally, provide the following parameters to save resources:
+    - **Name**: `orders-deployment`
+    - **Docker Image**: `eu.gcr.io/kyma-project/develop/orders-service:68a58069`
+    - Optionally, provide the following parameters to save resources:
 
     | Profile | Value | Profile | Value |
     | :--- | ---: | :--- | ---: |
@@ -162,14 +162,14 @@ You cannot access and test your new `orders-service` yet from outside of the clu
 
 2. Fill in the form in the **Create API Rule** view using the following details and choose **Create**
 
-   - **Name**: `orders-apirule`
-   - **HTTP Request Timeout**: `30` (or any up to `3900`)
-   - **Service Name**: `orders-service`
-   - **Port**: `80`
-   - Leave the pre-defined details in the **Gateway** section
-   - **Host**: choose your host from the dropdown menu and replace the wildcard (*) with a name, for example, `orders-host`
-   - Leave the pre-defined details in the **Rules** section
-   - **Methods**: choose `GET` and `POST`
+    - **Name**: `orders-apirule`
+    - **HTTP Request Timeout**: `30` (or any up to `3900`)
+    - **Service Name**: `orders-service`
+    - **Port**: `80`
+    - Leave the pre-defined details in the **Gateway** section
+    - **Host**: choose your host from the dropdown menu and replace the wildcard (*) with a name, for example, `orders-host`
+    - Leave the pre-defined details in the **Rules** section
+    - **Methods**: choose `GET` and `POST`
 
 3. The `orders-apirule` is created. Wait for the **Status** to be `OK`.
 
@@ -193,7 +193,7 @@ You cannot access and test your new `orders-service` yet from outside of the clu
 
 2. Place an order using curl replacing the `${APP_URL}` with your `orders-host` URL:
 
-    > **NOTE:** Windows users should use a Linux-like bash, for example, Git Bash to be able to copy and paste the sample code.
+    > **Note:** Windows users should use a Linux-like bash, for example, Git Bash to be able to copy and paste the sample code.
 
     ```bash
     curl -X POST ${APP_URL}/orders -k \
@@ -209,6 +209,6 @@ You cannot access and test your new `orders-service` yet from outside of the clu
 
     `[{"orderCode":"76272725","consignmentCode":"76272727","consignmentStatus":"PICKUP_COMPLETE"}]`
 
-    For a complete guide on how to run the `orders-service`, see [the example repository in GitHub](https://github.com/kyma-project/examples/blob/main/orders-service/README.md)
+    For a complete guide on how to run the `orders-service`, see [the example repository in GitHub](https://github.com/kyma-project/examples/blob/main/orders-service/README.md).
 
 Congratulations, you created and exposed your first microservice!
